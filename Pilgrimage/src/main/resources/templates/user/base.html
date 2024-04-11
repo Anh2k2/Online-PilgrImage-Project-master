@@ -9,15 +9,11 @@
 
 <!-- Bootstrap CSS -->
 <link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-	crossorigin="anonymous">
-
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link
-	href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
-	rel="stylesheet" />
+	href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
 
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -43,17 +39,13 @@
 <!-- Link booticon -->
 
 <link
-	href="
-https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.min.css
-"
-	rel="stylesheet">
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
 <!-- Google Web Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-	href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
-	rel="stylesheet">
+	href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
 
 <!-- Jquery  -->
 
@@ -76,7 +68,6 @@ https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.min.css
 			<a href="" class="navbar-brand p-0 fs-1 " style="color: #86b817;">
 				<i class="fa fa-map-marker-alt fa-bounce me-3"></i>MyTrip
 
-
 			</a>
 		</h1>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -85,19 +76,8 @@ https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.min.css
 		</button>
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<div class="navbar-nav ms-auto py-0">
-<!--				<a id="flight" th:href="@{/user/flight}"-->
-<!--					class="nav-item nav-link  item"> <i-->
-<!--					class="fa fa-plane-departure"></i> Flight-->
-<!--				</a> <a id="train" th:href="@{/user/train}"-->
-<!--					class="nav-item nav-link item"><i class="fa fa-train-subway"></i>Train</a>-->
-
-<!--				<a id="bus" th:href="@{/user/bus}" class="nav-item nav-link item"><i-->
-<!--					class="fa fa-bus"></i>Bus</a> <a id="package" th:href="@{/user/index}"-->
-<!--					class="nav-item nav-link   item "> <i class="fa fa-briefcase "></i>-->
-<!--					Holiday Package-->
 				</a> <a id="hotel" th:href="@{/user/hotel}"
 					class="nav-item nav-link  item "><i class="fa fa-hotel"></i>Hotel</a>
-
 			</div>
 			<div class="dropdown">
 
@@ -112,40 +92,6 @@ https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.min.css
 						data-bs-target="#exampleModal">
 						<i class="fa-solid fa-user"></i> &ensp;My Profile
 					</button>
-
-					<!-- Default dropstart button -->
-					<div class="btn-group dropstart">
-						<button type="button" class="btn btn-light dropdown-toggle"
-							data-bs-toggle="dropdown" aria-expanded="false">
-							<i class="fa-solid fa-wallet"></i> &ensp;My Trip
-						</button>
-						<ul class="dropdown-menu">
-							<!-- Dropdown menu links -->
-							<!-- Button trigger modal -->
-<!--							<li class="text-center" data-bs-toggle="modal"-->
-<!--								data-bs-target="#exampleModal22"><i class="fa fa-bus"></i>&ensp;-->
-<!--								Bus</li>-->
-
-<!--							<li class="text-center" data-bs-toggle="modal"-->
-<!--								data-bs-target="#exampleModal23"><i-->
-<!--								class="fa fa-train-subway"></i>&ensp; Train</li>-->
-
-
-<!--							<li class="text-center" data-bs-toggle="modal"-->
-<!--								data-bs-target="#exampleModal24"><i-->
-<!--								class="fa fa-plane-departure"></i>&ensp; Flight</li>-->
-
-
-							<li class="text-center" data-bs-toggle="modal"
-								data-bs-target="#exampleModal25"><i class="fa fa-hotel"></i>&ensp;
-								Hotel</li>
-
-<!--							<li class="text-center" data-bs-toggle="modal"-->
-<!--								data-bs-target="#exampleModal26"><i-->
-<!--								class="fa fa-briefcase "></i>&ensp; Holiday-Package</li>-->
-
-						</ul>
-					</div>
 
 					<button type="button" class="btn btn-white" data-bs-toggle="modal"
 						data-bs-target="#changepasswordModal">
@@ -361,313 +307,6 @@ https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.min.css
 
 	</div>
 
-
-
-
-
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal22" tabindex="-1"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Booking Bus</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-
-
-
-					<div class="container mt-5 mb-5" th:each="ff : ${bookingListOfUser}">
-
-						<div class="d-flex justify-content-center row">
-
-							<div class="col-md-12 shadow border">
-
-								<div class="row bg-white border rounded">
-
-									<div class="col-md-2 mt-4 text-center">
-
-										<h4 th:text="${ff.bus.company}">Air India</h4>
-										<p class="fs-6" th:text="${ff.bus.busNo}">#abs456</p>
-
-									</div>
-
-									<div class="col-md-2 mt-4 text-center">
-
-										<h4 th:text="${ff.bus.departureTime}">08:10</h4>
-
-										<p class="text-primary" th:text="${ff.bus.departureCity}">New Delhi</p>
-
-									</div>
-
-									<div class="col-md-2 mt-4 text-center">
-
-										<h5 th:text="${ff.bus.totalTime}" >02h:55m</h5>
-
-										<p th:text="${ff.date}">non-stop</p>
-
-									</div>
-
-									<div class="col-md-2 mt-4 text-center">
-
-										<h4 th:text="${ff.bus.destinationTime}">10:45</h4>
-
-										<p class="text-primary" th:text="${ff.bus.destinationCity}">Mumbai</p>
-
-									</div>
-
-									<div
-										class="align-items-center align-content-center col-md-2  mt-4 text-center">
-
-										<div class="  align-items-center text-center">
-
-											<h6 class=" text-center">No.Seats Booking</h6>
-											<h5 th:text="${ff.noOfSeats}"></h5>
-
-
-
-										</div>
-
-									</div>
-
-									<div class="col-md-2 text-center">
-
-										<div class="d-flex flex-column mt-3">
-
-
-
-											<button class="btn btn-outline-danger  mt-2" type="button">Cancel</button>
-
-
-
-
-
-
-										</div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-						</div>
-
-
-
-					</div>
-
-
-
-
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal23" tabindex="-1"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Booking Train</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-
-					<div class="container mt-5 mb-5" th:each="ff : ${userTrainBooking}">
-
-						<div class="d-flex justify-content-center row">
-
-							<div class="col-md-12 shadow border">
-
-								<div class="row bg-white border rounded">
-
-									<div class="col-md-2 mt-4 text-center">
-
-										<h4 th:text="${ff.train.company}">Air India</h4>
-										<p class="fs-6" th:text="${ff.train.trainNo}">#abs456</p>
-
-									</div>
-
-									<div class="col-md-2 mt-4 text-center">
-
-										<h4 th:text="${ff.train.departureTime}">08:10</h4>
-
-										<p class="text-primary" th:text="${ff.train.departureCity}">New Delhi</p>
-
-									</div>
-
-									<div class="col-md-2 mt-4 text-center">
-
-										<h5 th:text="${ff.train.totalTime}" >02h:55m</h5>
-
-										<p th:text="${ff.date}">non-stop</p>
-
-									</div>
-
-									<div class="col-md-2 mt-4 text-center">
-
-										<h4 th:text="${ff.train.destinationTime}">10:45</h4>
-
-										<p class="text-primary" th:text="${ff.train.destinationCity}">Mumbai</p>
-
-									</div>
-
-									<div
-										class="align-items-center align-content-center col-md-2  mt-4 text-center">
-
-										<div class="  align-items-center text-center">
-
-											<h6 class=" text-center">No.Seats Booking</h6>
-											<h5 th:text="${ff.noOfSeats}"></h5>
-
-
-
-										</div>
-
-									</div>
-
-									<div class="col-md-2 text-center">
-
-										<div class="d-flex flex-column mt-3">
-
-
-
-											<button class="btn btn-outline-danger  mt-2" type="button">Cancel</button>
-
-
-
-
-
-
-										</div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-						</div>
-
-
-
-					</div>
-
-
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal24" tabindex="-1"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Booking Flight</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-
-					<div class="container mt-5 mb-5" th:each="ff : ${userFlightBooking}">
-
-						<div class="d-flex justify-content-center row">
-
-							<div class="col-md-12 shadow border">
-
-								<div class="row bg-white border rounded">
-
-									<div class="col-md-2 mt-4 text-center">
-
-										<h4 th:text="${ff.flight.company}">Air India</h4>
-										<p class="fs-6" th:text="${ff.flight.flightNo}">#abs456</p>
-
-									</div>
-
-									<div class="col-md-2 mt-4 text-center">
-
-										<h4 th:text="${ff.flight.departureTime}">08:10</h4>
-
-										<p class="text-primary" th:text="${ff.flight.departureCity}">New Delhi</p>
-
-									</div>
-
-									<div class="col-md-2 mt-4 text-center">
-
-										<h5 th:text="${ff.flight.totalTime}" >02h:55m</h5>
-
-										<p th:text="${ff.date}">non-stop</p>
-
-									</div>
-
-									<div class="col-md-2 mt-4 text-center">
-
-										<h4 th:text="${ff.flight.destinationTime}">10:45</h4>
-
-										<p class="text-primary" th:text="${ff.flight.destinationCity}">Mumbai</p>
-
-									</div>
-
-									<div
-										class="align-items-center align-content-center col-md-2  mt-4 text-center">
-
-										<div class="  align-items-center text-center">
-
-											<h6 class=" text-center">No.Seats Booking</h6>
-											<h5 th:text="${ff.noOfSeats}"></h5>
-
-
-
-										</div>
-
-									</div>
-
-									<div class="col-md-2 text-center">
-
-										<div class="d-flex flex-column mt-3">
-
-
-
-											<button class="btn btn-outline-danger  mt-2" type="button">Cancel</button>
-
-
-
-
-
-
-										</div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-						</div>
-
-
-
-					</div>
-
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-
 	<!-- Modal -->
 	<div class="modal fade" id="exampleModal25" tabindex="-1"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -679,10 +318,10 @@ https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.min.css
 						aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-				
+
 				       <div class="row" >
-			
-			
+
+
 
 				<div class="hotels ">
 
@@ -777,64 +416,6 @@ https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.min.css
 				</div>
 			</div>
 		</div>
-	
-
-
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal26" tabindex="-1"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Booking
-						Holiday-Package</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-				
-				<div class="row  g-4 justify-content-center">
-
-
-				<div class="col-lg-4 col-md-6 mb-5">
-					<div class="package-item">
-						<div class="overflow-hidden">
-							<img th:src="@{/image/kedarn.jpg}" alt=""
-								class="img-fluid img-thumbnail" />
-						</div>
-						<div class="d-flex border-bottom">
-							<small class="flex-fill text-center border-end py-2"> <i
-								class="fa fa-map-marker-alt text-primary me-2"></i>Kedarnath
-							</small> <small class="flex-fill text-center border-end py-2"> <i
-								class="fa fa-calendar-alt text-primary me-2"></i>2 days
-							</small> <small class="flex-fill text-center border-end py-2"> <i
-								class="fa fa-person-hiking text-primary me-2"></i>2 Activities
-							</small>
-						</div>
-						<div class="text-center p-4">
-							<h3 class="mb-0">$ 14 000.00</h3>
-							<div class="mb-3">
-								<small class="fa fa-star text-primary"></small> <small
-									class="fa fa-star text-primary"></small> <small
-									class="fa fa-star text-primary"></small> <small
-									class="fa fa-star text-primary"></small> <small
-									class="fa fa-star text-primary"></small>
-							</div>
-							
-							<div class="d-flex justify-content-center mb-2">
-
-								<a href="" class="btn  btn-primary px"
-									>Cancel</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
 
 	<!-- JavaScript Libraries -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -849,7 +430,7 @@ https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.min.css
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous">
-		
+
 	</script>
 	<script th:src="@{/js/script.js}"></script>
 	<!-- Option 2: Separate Popper and Bootstrap JS -->
