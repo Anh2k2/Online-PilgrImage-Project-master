@@ -37,18 +37,6 @@ public class User {
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	private List<HotelBook> hotelBooks;
 
-//	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-//	private List<BusBook> busBooks;
-//
-//	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-//	private List<FlightBook> flightBooks;
-//
-//	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-//	private List<TrainBook> trainBooks;
-//
-//	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-//	private List<HolidayPackageBook> holidayPackageBooks;
-
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -117,37 +105,5 @@ public class User {
 	public void setHotelBooks(List<HotelBook> hotelBooks) {
 		this.hotelBooks = hotelBooks;
 	}
-
-//	public List<BusBook> getBusBooks() {
-//		return busBooks;
-//	}
-//
-//	public void setBusBooks(List<BusBook> busBooks) {
-//		this.busBooks = busBooks;
-//	}
-//
-//	public List<FlightBook> getFlightBooks() {
-//		return flightBooks;
-//	}
-//
-//	public void setFlightBooks(List<FlightBook> flightBooks) {
-//		this.flightBooks = flightBooks;
-//	}
-//
-//	public List<TrainBook> getTrainBooks() {
-//		return trainBooks;
-//	}
-//
-//	public void setTrainBooks(List<TrainBook> trainBooks) {
-//		this.trainBooks = trainBooks;
-//	}
-//
-//	public List<HolidayPackageBook> getHolidayPackageBooks() {
-//		return holidayPackageBooks;
-//	}
-//
-//	public void setHolidayPackageBooks(List<HolidayPackageBook> holidayPackageBooks) {
-//		this.holidayPackageBooks = holidayPackageBooks;
-//	}
 
 }

@@ -14,7 +14,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,22 +31,6 @@ import com.mytrip.service.UserService;
 import com.razorpay.Order;
 import com.razorpay.RazorpayClient;
 
-//import com.mytrip.model.Flight;
-//import com.mytrip.model.FlightBook;
-//import com.mytrip.model.HolidayPackageBook;
-//import com.mytrip.model.Package;
-//import com.mytrip.service.BusBokkinService;
-//import com.mytrip.service.BusService;
-//import com.mytrip.service.FlightBookService;
-//import com.mytrip.service.FlightService;
-//import com.mytrip.service.PackageBookingService;
-//import com.mytrip.service.PackageService;
-//import com.mytrip.service.TrainBookingService;
-//import com.mytrip.service.TrainService;
-//import com.mytrip.model.Bus;
-//import com.mytrip.model.BusBook;
-//import com.mytrip.model.Train;
-//import com.mytrip.model.TrainBook;
 
 @Controller
 @RequestMapping("/user")

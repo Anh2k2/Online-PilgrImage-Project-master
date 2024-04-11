@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -32,9 +31,6 @@ public class Hotel {
 	private String description;
 
 	private String hotelImgUrl;
-
-//	@ManyToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
-//	private List<Package> package1;
 
 	@OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
 	private List<HotelBook> hotelBooks;
@@ -115,14 +111,6 @@ public class Hotel {
 	public void setHotelImgUrl(String hotelImgUrl) {
 		this.hotelImgUrl = hotelImgUrl;
 	}
-
-//	public List<Package> getPackage1() {
-//		return package1;
-//	}
-//
-//	public void setPackage1(List<Package> package1) {
-//		this.package1 = package1;
-//	}
 
 	public List<HotelBook> getHotelBooks() {
 		return hotelBooks;
