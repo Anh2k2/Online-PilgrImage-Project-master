@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.mytrip.model.Hotel;
-import com.mytrip.model.HotelBook;
 import com.mytrip.model.User;
 import com.mytrip.helper.Message;
 import com.mytrip.service.HotelBookService;
@@ -84,15 +83,15 @@ public class AdminController {
 	}
 
 	//booking
-	@GetMapping("/bookhotel")
-	public String bookHotel(Model model) {
-		List<HotelBook> getAllBookHotel = hotelBookService.GetAllBookHotel();
-		model.addAttribute("getAllBookHotel", getAllBookHotel);
-
-		model.addAttribute("title", "book-Hotels");
-
-		return "admin/bookhotel";
-	}
+//	@GetMapping("/bookhotel")
+//	public String bookHotel(Model model) {
+//		List<HotelBook> getAllBookHotel = hotelBookService.GetAllBookHotel();
+//		model.addAttribute("getAllBookHotel", getAllBookHotel);
+//
+//		model.addAttribute("title", "book-Hotels");
+//
+//		return "admin/bookhotel";
+//	}
 
 	//add
 	@PostMapping("/addhotel")
