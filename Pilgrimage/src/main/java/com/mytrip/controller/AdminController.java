@@ -25,7 +25,6 @@ import org.springframework.web.multipart.MultipartFile;
 import com.mytrip.model.Hotel;
 import com.mytrip.model.User;
 import com.mytrip.helper.Message;
-import com.mytrip.service.HotelBookService;
 import com.mytrip.service.HotelService;
 import com.mytrip.service.UserService;
 
@@ -39,10 +38,6 @@ public class AdminController {
 
 	@Autowired
 	private HotelService hotelService;
-
-	@Autowired
-	private HotelBookService hotelBookService;
-
 
 	@ModelAttribute
 	public void addcommanData(Model model, Principal principal) {
@@ -61,9 +56,6 @@ public class AdminController {
 	public String AdminDashboard(Model model) {
 		long hotelCOunt = hotelService.HotelCOunt();
 		model.addAttribute("hotelCOunt", hotelCOunt);
-		
-		long hotelBookingCOunt = hotelBookService.HotelBookingCOunt();
-		model.addAttribute("hotelBookingCOunt", hotelBookingCOunt);
 
 		long userCount = userService.UserCount();
 		model.addAttribute("userCount", userCount);
@@ -81,17 +73,6 @@ public class AdminController {
 
 		return "admin/viewhotel";
 	}
-
-	//booking
-//	@GetMapping("/bookhotel")
-//	public String bookHotel(Model model) {
-//		List<HotelBook> getAllBookHotel = hotelBookService.GetAllBookHotel();
-//		model.addAttribute("getAllBookHotel", getAllBookHotel);
-//
-//		model.addAttribute("title", "book-Hotels");
-//
-//		return "admin/bookhotel";
-//	}
 
 	//add
 	@PostMapping("/addhotel")

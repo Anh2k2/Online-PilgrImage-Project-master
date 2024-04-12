@@ -16,9 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mytrip.model.Hotel;
-import com.mytrip.model.HotelBook;
 import com.mytrip.model.User;
-import com.mytrip.service.HotelBookService;
 import com.mytrip.service.HotelService;
 import com.mytrip.service.UserService;
 
@@ -34,9 +32,6 @@ public class UserController {
 	private HotelService hotelService;
 
 	@Autowired
-	private HotelBookService hotelBookService;
-
-	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	@ModelAttribute
@@ -46,19 +41,8 @@ public class UserController {
 		System.out.println(user);
 		model.addAttribute("user", user);
 
-		List<HotelBook> userBookingHotel = hotelBookService.UserBookingHotel(user);
-		model.addAttribute("userBookingHotel", userBookingHotel);
-
 	}
 
-//	@GetMapping("/index")
-//	public String UserIndex(Model model) {
-//		model.addAttribute("title", "Holiday-Package");
-//		//List<Package> allPAckage = packageService.getAllPAckage();
-//
-//		//model.addAttribute("allPAckage", allPAckage);
-//		return "user/package";
-//	}
 	@GetMapping("/index")
 	public String UserIndex(Model model) {
 		model.addAttribute("title", "Hotels");

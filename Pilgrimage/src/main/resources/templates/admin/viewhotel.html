@@ -37,7 +37,6 @@
 								<th scope="col">Type</th>
 								<th scope="col">No Of Rooms</th>
 								<th scope="col">No of Person</th>
-
 								<th scope="col">Price</th>
 								<th scope="col">Details</th>
 								<th scope="col">Action</th>
@@ -48,15 +47,10 @@
 
 								<!-- <th scope="row">1</th> -->
 								<td th:text="${h.hotelName}"></td>
-
-
-								<td th:text="${h.location}">Mark</td>
-
+								<td th:text="${h.location}"></td>
 								<td th:text="${h.type}"></td>
 								<td th:text="${h.noofRooms}"></td>
 								<td th:text="${h.noofPerson}"></td>
-
-
 								<td th:text="${h.price}">@mdo</td>
 								<td th:text="${h.description}">@mdo</td>
 								<td>
@@ -67,9 +61,11 @@
 										th:attr="data-bs-target='#offcanvasRight'+${h.hId}"
 										aria-controls="offcanvasRight">
 										<i class="fa-solid fa-pen-to-square"></i>
-									</button> <br> <a href="#" th:onclick="|deleteHotel(${h.hId})|"
-									class=" btn btn-danger mt-2  text-center"><i
-										class="fa-solid fa-trash-can"></i></a>
+									</button>
+									<br>
+									<a href="#" th:onclick="|deleteHotel(${h.hId})|"
+									class=" btn btn-danger mt-2  text-center">
+									<i class="fa-solid fa-trash-can"></i></a>
 
 
 									<div class="offcanvas offcanvas-end" tabindex="-1"

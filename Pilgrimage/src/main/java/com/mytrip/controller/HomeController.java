@@ -32,12 +32,6 @@ public class HomeController {
 		return "index";
 	}
 
-	@GetMapping("/package")
-	public String Package(Model model) {
-		model.addAttribute("title", "Holidays Packages");
-		return "package";
-	}
-
 	@GetMapping("/signin")
 	public String LoginPage(Model model) {
 		model.addAttribute("title", "signIn Page");

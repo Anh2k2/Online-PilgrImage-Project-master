@@ -23,6 +23,9 @@ function deleteHotel(hId) {
 		.then((willDelete) => {
 			if (willDelete) {
 				window.location = "/admin/deletehotel/" + hId;
+				swal("Hotel deleted successfully!", {
+					icon: "success",
+				});
 			} else {
 				swal("Your Hotel  is safe!");
 			}
